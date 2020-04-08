@@ -1,0 +1,252 @@
+@charset "UTF-8";
+@font-face{
+    font-family: 'fonteLogo';
+    src: url(../_fonts/bubblegum-sans-regular.otf);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#dddddd;
+    color: rgba(0,0,0,1);
+    }
+    p {
+        text-align: justify;
+        text-indent: 50px;
+}  
+    a {                         /*mexendo com a formatação do link*/
+        color: #606060;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+
+/*Formatação do icone*/
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 780px;
+    top: 70px;
+}
+
+/*Formatação para cabeçalho*/
+header#cabecalho {
+    border-bottom: 1px #606060 solid;  /*Aqui temos o desenho da linha continua com a opção solid*/
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;  /*o no-repeat faz com que a imagem não seja replicada. o 0px é deslocamento lateral e o 80px é o deslocamento vertical*/
+}                                                                                 
+
+/*Fonte do cabecalho Titulo*/
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;  /*ajuste da margem de baixo*/
+}
+
+/*Fonte do cabecalho Subtitulo*/
+header#cabecalho h2{
+    font-family: Arial, sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding-top: 0px;   
+    margin-top: 0px;/*ajuste da margem de cima*/
+}
+    
+/*Formatação para interface*/
+
+div#interface {
+    width: 900px;
+    background-color: #ffffff;
+    margin: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5); /*Sombra envolta do objeto, desloacamneto lateral, deslocamneto vertical, espalhamneto da sombra e a cor da sombra. O .5 é 50%*/
+    padding: 10px; /*Aqui todos os lados tem 10px, Espaço de margem interno do objeto*/
+}
+
+/*Formatação de imagens com legendas*/
+figure.foto-legenda {                     /*Aqui se controla */
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;     /* Sombra na foto muito legal*/
+}
+
+figure.foto-legenda img {        /*Aqui se controla as dimensões da imagem*/
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {      /*Aqui é possivel controlar os efeitos e a legenda*/
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color:rgba(0,0,0,.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    box-sizing: border-box; 
+    transition: 1s;
+}
+
+figure.foto-legenda:hover figcaption {   /**/
+opacity: 100%;
+}
+
+/*Formatação do menu*/
+
+nav#menu {                  /*Aqui criamos o navegador como um bloco, pois so assim ele ira conseguir flutuar pela tela */
+        display: block;
+}
+
+nav#menu ul{
+    list-style: none;                  /*Sem marcação dos itens*/
+    text-transform: uppercase;        /*Letras maisculas*/
+    position: absolute;     /*Aqui ele fica fora da posição relativa, para passar por cima dos documentos*/
+    top: -20px;         /*Tanto o top quanto left regulam a posição do bloco*/
+    left: 300px;
+}
+
+nav#menu li {
+    display: inline-block;         /*Exibir horizontalmente*/
+    background-color: #dddddd;   /*cor de fundo no menu*/
+    padding: 10px;                  /*Espaço dentro da caixa*/
+    margin: 2px;         /*Espaço entre os botões*/
+    transition: background-color 1s;  /*Tempo de duração do hover*/
+}
+
+nav#menu li:hover {     /*o hover permite sobrear o box quando passar o cursor do mouse*/
+    background-color: #606060;    /*Efeito visual com sobra*/
+}
+
+nav#menu h1{            /**Essa classe serve para esconder o nome "menu principal" mas mantendo sua estrutura dentro do site*/
+    display: none;
+}
+
+nav#menu a{
+    color: black;              /*cor das letras*/
+    text-decoration: none;      /*Sem bublinar*/
+}
+
+nav#menu a:hover{    /*Ao passar o mouse por cima ele muda a cor*/
+    color: white;               /*Muada a letra para a cor branca*/
+    text-decoration: underline;   /*Sublinha a letra*/
+}
+
+/*Trabalhando com as secões*/
+
+section#corpo {
+    display: block;
+    width: 485px;
+    float: left;     /*Para que possa flutuar*/
+    border-right: 1px solid #606060;
+    padding-right: 30px;
+}
+/*Aqui trabalhamos o artigo*/
+article#noticia-principal h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 0px;
+    margin: 10px 0px 10px 0px;
+}
+/*Aqui trabalhamos com o cabecalho do artigo*/
+header#cabecalho-artigo h1{
+    font-family: 'fonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+.direita {
+    text-align: right;
+}
+header#cabecalho-artigo h3{   /*Edição da data*/
+    font-size: 10pt;
+    color: #606060;
+}
+
+/*Editando a tabela dentro do corpo*/
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;    /*retira os espacos de dentro da celulas*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+}
+
+/*Formantando a tabela atraves das class, mudando cores*/
+table#tabelaspec td.ce {
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;                 /*negrito*/
+}
+table#tabelaspec caption{            /*Subtitulo da tabela*/
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table#tabelaspec caption span{    /*Aqui temos o Mar/ 2013*/
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+table#tabelaspec td.cd {
+    background-color: #cecece;
+}
+
+/*Lateral do corpo*/
+aside#lateral {
+    display: block;
+    width: 350px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: rgba(0,0,0,.5);
+}
+aside#lateral h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+}
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 10px;
+}
+
+footer#rodape{
+    clear: both;  /*Limpando a divisão dos dois lados*/
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p{
+    text-align: center;
+    text-indent: 50px;
+}
+video#video2 {
+    display: block;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 350px;
+}
